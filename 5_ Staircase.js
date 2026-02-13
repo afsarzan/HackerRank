@@ -37,6 +37,9 @@ function staircase(n) {
             res+= ((n-i)-1>j) ? " " : "#"; 
         }
         console.log(res);
+
+        // one liner
+        console.log('#'.repeat(i).padStart(n));
     }
 }
 
