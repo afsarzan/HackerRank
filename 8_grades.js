@@ -48,6 +48,12 @@ function gradingStudents(grades) {
     }
     return result
 
+
+    // one liner
+     return grades.map(g => {
+        const next = Math.ceil(g / 5) * 5;
+        return g < 38 || next - g >= 3 ? g : next;
+    });
 }
 
 function main() {
