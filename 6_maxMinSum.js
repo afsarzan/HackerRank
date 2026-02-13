@@ -31,6 +31,20 @@ function miniMaxSum(arr) {
     arr = arr.sort((a,b) => a-b);
     const res = arr.reduce( (acc,item) => item + acc,0);
     console.log(`${res-arr[arr.length-1]} ${res-arr[0]}`)
+
+
+    // second approach without sort
+    let total = 0;
+    let min = arr[0];
+    let max = arr[0];
+    
+    for (let num of arr) {
+        total += num;
+        if (num < min) min = num;
+        if (num > max) max = num;
+    }
+    
+    console.log((total - max) + ' ' + (total - min));
 }
 
 function main() {
